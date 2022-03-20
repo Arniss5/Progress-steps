@@ -14,4 +14,4 @@ HTML, CSS, JavaScript (vanilla)
   - adding/deleting classes with JS eventListener
   - Iterating through divs
 
-![Preview]("progress-steps preview.jpg")
+![Preview](progress-steps-preview.jpg)
