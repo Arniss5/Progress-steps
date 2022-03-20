@@ -8,7 +8,8 @@ HTML, CSS, JavaScript (vanilla)
   - Previous/next buttons cause the progress line to fill up
  
 ## Learned/ practiced
-  - CSS: transform, translate, custom properties, pseudoclasses (:focus,:disabled, ::before)
+  - CSS: transform, translate, custom properties, position absolute/relative
+  - pseudoclasses (:disabled, :active ::before)
   - Google font
   - adding/deleting classes with JS eventListener
   - Iterating through divs

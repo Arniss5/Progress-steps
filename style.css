@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
 
+
+/* Selector similar to html but with higher specificity */
 :root {
+    /* custom properties */
     --active-color: rgb(132, 29, 163);
     --not-active-color: rgb(224, 210, 230);
     --background-color: white;
-
 }
 
 
@@ -32,8 +34,8 @@ body {
     max-width: 100%;
     width: 400px;
     margin-bottom: 30px;
+    /* relative so I can position absolute progress bars */
     position: relative;
-    
 }
 
 .progress {
@@ -65,6 +67,7 @@ body {
     position: absolute;
     top: 50%;
     left: 0;
+    /* places the line in the middle */
     transform: translateY(-50%);
     height: 4px;
     width: 0%;
@@ -75,6 +78,7 @@ body {
 .progress.active {
     border-color: var(--active-color);
     color: var(--active-color);
+    transition: 0.4s ease;
 }
 .button-container {
     display: flex;
@@ -100,5 +104,6 @@ button:disabled {
 }
 
 button:active {
+    /* clicking animation */
     transform: scale(0.98);
 }
