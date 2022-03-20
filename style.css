@@ -3,7 +3,7 @@
 :root {
     --active-color: rgb(132, 29, 163);
     --not-active-color: rgb(224, 210, 230);
-    
+    --background-color: white;
 
 }
 
@@ -21,14 +21,19 @@ body {
     height: 100vh;
     overflow: hidden;
 }
+.container {
+    text-align: center;
+}
 
 .progress-container {
     display: flex;
     justify-content: space-between;
     font-size: 20px;
     max-width: 100%;
-    width: 350px;
-      
+    width: 400px;
+    margin-bottom: 30px;
+    position: relative;
+    
 }
 
 .progress {
@@ -39,23 +44,61 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    background-color: var(--background-color);
+    color: var(--not-active-color);
 }
 
-#first-circle::before {
+.progress-container::before {
     content: '';
     height: 4px;
-    width: 50%;
+    width: 100%;
     position: absolute;
-    color: var(--active-color);
+    background-color: var(--not-active-color);
     top: 50%;
     left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+#progress-line {
+    background-color: var(--active-color);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+    transition: 0.4s ease;
 }
 
 .progress.active {
     border-color: var(--active-color);
+    color: var(--active-color);
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
-    
+    margin: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    width: 110px;
+    height: 35px;
+    color: var(--background-color);
+    background-color: var(--active-color);
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: var(--not-active-color);
+    cursor: not-allowed;
+}
+
+button:active {
+    transform: scale(0.98);
 }
