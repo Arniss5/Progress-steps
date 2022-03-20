@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+:root {
+    --active-color: rgb(132, 29, 163);
+    --not-active-color: rgb(224, 210, 230);
+    
+
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    max-width: 100%;
+    width: 350px;
+      
+}
+
+.progress {
+    border: solid 4px var(--not-active-color);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#first-circle::before {
+    content: '';
+    height: 4px;
+    width: 50%;
+    position: absolute;
+    color: var(--active-color);
+    top: 50%;
+    left: 0;
+}
+
+.progress.active {
+    border-color: var(--active-color);
+}
+
+button {
+    
+}
