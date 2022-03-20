@@ -13,3 +13,5 @@ HTML, CSS, JavaScript (vanilla)
   - Google font
   - adding/deleting classes with JS eventListener
   - Iterating through divs
+
+[Preview](./"progress-steps preview.jpg")
